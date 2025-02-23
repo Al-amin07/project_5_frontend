@@ -20,6 +20,7 @@ import MainTextarea from "@/utils/forms/MainTextarea"
 import { FieldValues, SubmitHandler } from "react-hook-form"
 
 export function UpdateBlogModal({ handleUpdate, defaultValue }: { handleUpdate: SubmitHandler<FieldValues>, defaultValue: any }) {
+    console.log("ssdvgsdf")
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -41,11 +42,11 @@ export function UpdateBlogModal({ handleUpdate, defaultValue }: { handleUpdate: 
                         <MainTextarea name="description" label="Description" />
                     </div>
                     <DialogFooter className="sm:justify-end mt-5">
-                        <DialogClose asChild>
-                            <Button type="submit" variant="default">
-                                Update
-                            </Button>
-                        </DialogClose>
+
+                        <Button type="submit" variant="default">
+                            Update
+                        </Button>
+
                         <DialogClose asChild>
                             <Button type="button" variant="outline">
                                 Close

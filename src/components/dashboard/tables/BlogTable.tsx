@@ -19,7 +19,6 @@ const BlogTable = ({ blog, refetch, session }: { blog: IBlog, refetch: () => voi
     const [deleteBlog, { isLoading }] = useDeleteBlogMutation();
     const [updateModal] = useUpdateBlogMutation()
     const deleteHandler = async () => {
-
         const toastId = toast.loading("Deleting Blog...");
         if (session?.user?.email !== blog?.author?.email) {
             toast.error("You are not authorized to delete this blog", { id: toastId, duration: 3000 });
@@ -40,6 +39,7 @@ const BlogTable = ({ blog, refetch, session }: { blog: IBlog, refetch: () => voi
 
 
     const handleUpdate: SubmitHandler<FieldValues> = async (data) => {
+        console.log('Hello World')
         const toastId = toast.loading("Updating Blog...");
         if (session?.user?.email !== blog?.author?.email) {
             toast.error("You are not authorized to update this blog", { id: toastId, duration: 3000 });

@@ -43,11 +43,11 @@ export function UpdateProjectModal({ handleUpdate, defaultValue }: { handleUpdat
                         <MainTextarea name="description" label="Description" />
                     </div>
                     <DialogFooter className="sm:justify-end mt-5">
-                        <DialogClose asChild>
-                            <Button type="submit" variant="default">
-                                Update
-                            </Button>
-                        </DialogClose>
+
+                        <Button type="submit" variant="default">
+                            Update
+                        </Button>
+
                         <DialogClose asChild>
                             <Button type="button" variant="outline">
                                 Close
